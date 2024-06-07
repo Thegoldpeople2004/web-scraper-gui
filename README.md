@@ -9,7 +9,6 @@ import csv
 import tkinter as tk
 from tkinter import messagebox
 
-# 函数接收URL和用户定义的选择器
 def scrape_website(url, selectors):
     try:
         response = requests.get(url)
@@ -41,7 +40,6 @@ def scrape_website(url, selectors):
     except Exception as e:
         messagebox.showerror("错误", f"请求失败，错误信息： {str(e)}")
 
-# GUI部分
 def start_scraping():
     url = url_entry.get()
     # 假设用户会自己输入或选择预设的规则
